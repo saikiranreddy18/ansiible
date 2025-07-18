@@ -144,6 +144,7 @@ cd ansible-docker-demo
 ```
 
 ### Step 2: Create Docker Files
+
 Create the three files above (`docker-compose.yml`, `Dockerfile.master`, `Dockerfile.node`) in your project directory.
 
 ### Step 3: Start the Containers
@@ -162,8 +163,11 @@ ansible-master    ansible-docker-demo-ansible-master   "/bin/bash"              
 node1             ansible-docker-demo-node1             "/usr/sbin/sshd -D"       node1             2 minutes ago    Up 2 minutes    22/tcp
 node2             ansible-docker-demo-node2             "/usr/sbin/sshd -D"       node2             2 minutes ago    Up 2 minutes    22/tcp
 ```
+Work with this Dir
+```
 USER ansible
 WORKDIR /home/ansible/ansible-work
+```
 
 You should now be in the container as the ansible user at `/home/ansible/ansible-work`.
 
