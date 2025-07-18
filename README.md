@@ -162,6 +162,10 @@ ansible-master    ansible-docker-demo-ansible-master   "/bin/bash"              
 node1             ansible-docker-demo-node1             "/usr/sbin/sshd -D"       node1             2 minutes ago    Up 2 minutes    22/tcp
 node2             ansible-docker-demo-node2             "/usr/sbin/sshd -D"       node2             2 minutes ago    Up 2 minutes    22/tcp
 ```
+USER ansible
+WORKDIR /home/ansible/ansible-work
+
+You should now be in the container as the ansible user at `/home/ansible/ansible-work`.
 
 ### Step 4: Connect to Ansible Master
 ```bash
@@ -174,7 +178,7 @@ OR
 docker exec -it ansible-master bash
 ```
 
-You should now be in the container as the ansible user at `/home/ansible/ansible-work`.
+
 
 ### Step 5: Create Ansible Configuration Files Inside the Container
 
